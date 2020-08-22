@@ -1,0 +1,16 @@
+# action.yml
+name: 'Closed Issues Message'
+description: 'Add a default comment on all issues that get closed'
+inputs:
+    repo-token:
+        description: 'Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}'
+        required: true
+    closed-issues-message:
+        description: 'The message you want to be commented whenever an issue is closed'
+        required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+    icon: 'message-square'
+    color: 'orange'
