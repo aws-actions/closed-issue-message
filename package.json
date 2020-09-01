@@ -6,18 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SomayaB/closed-issues-message.git"
-  },
-  "author": "Somaya Bounouar @SomayaB",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/SomayaB/closed-issues-message/issues"
-  },
-  "homepage": "https://github.com/SomayaB/closed-issues-message#readme",
   "dependencies": {
     "@actions/core": "^1.2.4",
     "@actions/github": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-google": "^0.14.0"
   }
 }
