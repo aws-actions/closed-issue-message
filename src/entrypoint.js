@@ -9,7 +9,7 @@ const run = async () => {
     const context = github.context;
 
     if (!message) {
-      github.setFailed('"message" input not found.');
+      core.setFailed('"message" input not found.');
       return;
     }
 
