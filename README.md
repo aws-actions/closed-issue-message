@@ -21,7 +21,7 @@ jobs:
     auto_comment:
         runs-on: ubuntu-latest
         steps:
-        - uses: aws-actions/closed-issue-message
+        - uses: aws-actions/closed-issue-message@v1
             with:
             # These inputs are both required
             repo-token: "${{ secrets.GITHUB_TOKEN }}"
