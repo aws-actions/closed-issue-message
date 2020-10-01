@@ -1,11 +1,11 @@
 # action.yml
-name: 'Closed Issues Message'
+name: 'Closed Issue Message'
 description: 'Add a default comment on all issues that get closed'
 inputs:
     repo-token:
         description: 'Token for the repository. Can be passed in using {{ secrets.GITHUB_TOKEN }}'
         required: true
-    closed-issues-message:
+    message:
         description: 'The message you want to be commented whenever an issue is closed'
         required: true
 runs:

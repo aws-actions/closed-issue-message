@@ -5,11 +5,11 @@ const github = require('@actions/github');
 const run = async () => {
   try {
     const token = core.getInput('repo-token');
-    const message = core.getInput('closed-issues-message');
+    const message = core.getInput('message');
     const context = github.context;
 
     if (!message) {
-      github.setFailed('"closed-issues-message" input not found.');
+      github.setFailed('"message" input not found.');
       return;
     }
 
