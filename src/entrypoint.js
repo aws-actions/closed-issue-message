@@ -12,13 +12,17 @@ const run = async () => {
       core.setFailed('"message" input not found.');
       return;
     }
-
-    if (context.payload.issue == null) {
-      core.setFailed('No issue found.');
+    
+    let issueNumber;
+    if (context.payload.issue) {
+      issueNumber = context.payload.issue.number;
+    } else if (context.payload.pull_request) {
+      issueNumber = context.payload.pull_request.number;
+    } else {
+      core.setFailed('No issue or PR found.');
       return;
     }
 
-    const issueNumber = context.payload.issue.number;
     // eslint-disable-next-line new-cap
     const octokit = new github.getOctokit(token);
 
