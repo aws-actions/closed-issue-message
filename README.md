@@ -1,6 +1,6 @@
 # "Closed Issue Message" Action for GitHub Actions
 
-This action sets a default message to be commented on all issues when they get closed.
+This action sets a default message to be commented on all issues or pull requests when they get closed.
 
 ## Usage
 
