@@ -14,7 +14,7 @@ if (!issueNumber) {
 
 try {
   await octokit.rest.issues.createComment({
-    ...context.repo,
+    ...github.context.repo,
     issue_number: issueNumber,
     body: message
   });
