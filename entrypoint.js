@@ -5,10 +5,6 @@ import { exit } from 'node:process';
 const token = core.getInput('repo-token', { required: true });
 const octokit = github.getOctokit(token);
 const message = core.getInput('message', { required: true });
-console.debug(`GitHub: ${JSON.stringify(github)}`);
-console.debug(`Octokit: ${JSON.stringify(octokit)}`);
-console.debug(`Message: ${message}`);
-console.debug(`Context: ${JSON.stringify(github.context)}`);
 
 const issueNumber = github.context.payload.issue?.number || github.context.payload.pull_request?.number;
 if (!issueNumber) {
