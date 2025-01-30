@@ -1,22 +1,20 @@
 {
   "name": "closed-issue-message",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "GitHub Action that sets a default message to be commented on all issues when they get closed.",
-  "main": "src/entrypoint.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "entrypoint.js",
+  "author": "Amazon Web Services, Inc. or its affiliates.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aws-actions/closed-issue-message"
   },
+  "type": "module",
   "license": "Apache-2.0",
   "dependencies": {
-    "@actions/core": "^1.9.1",
-    "@actions/github": "^4.0.0"
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
   },
   "devDependencies": {
-    "eslint": "^9.15.0",
-    "eslint-config-google": "^0.14.0"
+    "@biomejs/biome": "1.9.4"
   }
 }

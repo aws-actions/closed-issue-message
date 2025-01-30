@@ -1,4 +1,4 @@
-# action.yml
+---
 name: 'Closed Issue Message'
 description: 'Add a default comment on all issues that get closed'
 inputs:
@@ -9,8 +9,8 @@ inputs:
         description: 'The message you want to be commented whenever an issue is closed'
         required: true
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node20'
+  main: 'entrypoint.js'
 branding:
     icon: 'message-square'
     color: 'orange'
