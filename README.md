@@ -19,10 +19,12 @@ on:
        types: [closed]
 jobs:
     auto_comment:
+        permissions:
+            issues: write
         runs-on: ubuntu-latest
         steps:
-        - uses: aws-actions/closed-issue-message@v1
-            with:
+        - uses: aws-actions/closed-issue-message@v2
+          with:
             # These inputs are both required
             repo-token: "${{ secrets.GITHUB_TOKEN }}"
             message: "Comments on closed issues are hard for our team to see." 
